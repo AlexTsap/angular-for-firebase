@@ -17,7 +17,6 @@
 
 <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 <script>
-  // Initialize Firebase
   var config = {
     apiKey: "AIzaSyAw5Q9zBkbfeGTvU2eqNGIcdOu22ILeMLk",
     authDomain: "angular-test-project-daf47.firebaseapp.com",
@@ -27,10 +26,6 @@
     messagingSenderId: "811638437468"
   };
   firebase.initializeApp(config);
-
-  let bigOne = document.getElementById('bigOne');
-  let bdRef = firebase.database().ref().child('text');
-  dbRef.on('value', snap => bigOne.innerText = snap.val());
 </script>
 </html>
 

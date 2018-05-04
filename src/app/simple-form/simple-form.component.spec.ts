@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SimpleFormComponent } from './simple-form.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('SimpleFormComponent', () => {
   let component: SimpleFormComponent;
@@ -8,7 +9,8 @@ describe('SimpleFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SimpleFormComponent ]
+      declarations: [ SimpleFormComponent ],
+      schemas: [NO_ERRORS_SCHEMA],
     })
     .compileComponents();
   }));
