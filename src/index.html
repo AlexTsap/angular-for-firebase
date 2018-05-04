@@ -7,8 +7,31 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.5.3/css/tachyons.min.css">
 </head>
 <body>
-  <app-root></app-root>
+  <app-root>
+    <h1 id="bigOne"></h1>
+  </app-root>
 </body>
+
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAw5Q9zBkbfeGTvU2eqNGIcdOu22ILeMLk",
+    authDomain: "angular-test-project-daf47.firebaseapp.com",
+    databaseURL: "https://angular-test-project-daf47.firebaseio.com",
+    projectId: "angular-test-project-daf47",
+    storageBucket: "",
+    messagingSenderId: "811638437468"
+  };
+  firebase.initializeApp(config);
+
+  let bigOne = document.getElementById('bigOne');
+  let bdRef = firebase.database().ref().child('text');
+  dbRef.on('value', snap => bigOne.innerText = snap.val());
+</script>
 </html>
+
+
